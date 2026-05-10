@@ -1,0 +1,23 @@
+from tkinter import *
+class app:
+    def __init__(self):        
+        self.janela = Tk()
+        self.janela.title("Interface Gráfica")
+        self.frame1 = Frame(self.janela)
+        self.label = Label(self.frame1, text="login", width=20, height=2, font="arial 12 bold")
+        self.label.pack(side=LEFT)
+        self.entrada = Entry(self.frame1, width=30, font="arial 12")
+        self.entrada.pack(pady=10, side=LEFT)
+        self.frame2 = Frame(self.janela)
+        self.label2 = Label(self.frame2, text="senha", width=20, height=2, font="arial 12 bold")
+        self.label2.pack(side=LEFT)
+        self.entrada2 = Entry(self.frame2, width=30, font="arial 12", show="*")
+        self.entrada2.pack(pady=10, side=LEFT)
+        self.frame3 = Frame(self.janela)
+        self.botao = Button(self.frame3, text="Entrar", bg="yellow", fg="black", width=10, height=2, font="arial 12 bold")
+        self.botao.pack()
+        self.frame1.pack()
+        self.frame2.pack()
+        self.frame3.pack()
+        self.janela.mainloop()
+aplicacao = app()
